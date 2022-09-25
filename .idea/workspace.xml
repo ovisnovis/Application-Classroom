@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GradesOnMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AverageGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AverageGrade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
