@@ -1,9 +1,15 @@
-public class Student {
-    public String name;
-    public String avgGrade;
+import java.text.DecimalFormat;
 
-    public Student(String name, String avgGrade) {
+public class Student {
+    private static final DecimalFormat df = new DecimalFormat("0.00");
+
+    public String name;
+    public double avgGrade;
+    public String avgGradeString ;
+
+    public Student(String name, double avgGrade) {
         this.name = name;
         this.avgGrade = avgGrade;
+        this.avgGradeString = df.format(avgGrade);
     }
 }

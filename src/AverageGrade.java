@@ -1,12 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class AverageGrade {
-    private static final DecimalFormat df = new DecimalFormat("0.00");
     static List<Student> classroom = new ArrayList<>();
 
     public static List<String> inputFile() {
@@ -29,7 +27,7 @@ public class AverageGrade {
             for (int i = 1; i < who.length; i++) {
                 counter = counter + Double.parseDouble(who[i]);
             }
-            Student kid = new Student(who[0], df.format(counter / (who.length - 1)));
+            Student kid = new Student(who[0], counter / (who.length - 1));
             classroom.add(kid);
         }
     }
@@ -38,7 +36,7 @@ public class AverageGrade {
         dataSplit();
         for (Student object : classroom
         ) {
-            System.out.println("The average grade for " + object.name + " is: " + object.avgGrade);
+            System.out.println("The average grade for " + object.name + " is: " + object.avgGradeString);
         }
     }
 }
