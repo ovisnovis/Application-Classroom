@@ -1,3 +1,5 @@
+import alumni.Student;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -15,11 +17,9 @@ public class AverageGrade {
             scn.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
-            e.printStackTrace();
         }
         return dataList;
     }
-
     public static void dataSplit() {
         for (String student : inputFile()) {
             String[] who = student.split(",");
@@ -27,12 +27,12 @@ public class AverageGrade {
             for (int i = 1; i < who.length; i++) {
                 counter = counter + Double.parseDouble(who[i]);
             }
-            Student kid = new Student(who[0], counter / (who.length - 1));
-            classroom.add(kid);
+            classroom.add(new Student(who[0], counter / (who.length - 1)));
         }
     }
 
     public static void printStudents() {
+
         dataSplit();
         for (Student object : classroom
         ) {
