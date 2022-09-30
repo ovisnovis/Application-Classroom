@@ -10,17 +10,16 @@ import java.util.Scanner;
 
 public class Reader {
     static Scanner scanner;
-    static List<Student> studentList;
 
-    public static void readGradesV1() {
-        studentList = new ArrayList<>();
+    public static List<Student> readGradesV1() {
+        List<Student> studentList = new ArrayList<>();
         List<String> dataList = new ArrayList<>();
         try {
-            scanner = new Scanner(new File("Files/grades-v01.txt"));
+            scanner = new Scanner(new File("C:\\Users\\andre\\OneDrive\\Documents\\GitHub\\Application-Classroom\\src\\Files\\grades-v01.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
         }
-        while (scanner.hasNextLine()){
+        while (scanner.hasNextLine()) {
             dataList.add(scanner.nextLine());
         }
         scanner.close();
@@ -36,7 +35,9 @@ public class Reader {
                     System.out.println("no valid number!");
                 }
             }
+            studentList.add(student);
         }
+        return studentList;
     }
 
     public static List<String> readGradesV2() {
