@@ -12,29 +12,31 @@ public class Student {
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
     private static String name;
-    public static List<Double> grades = new ArrayList<>();
+    private static List<Double> grades = new ArrayList<>();
 
-    public Student() {
+    public Student(String newName, List<Double> newGrade) {
+        this.setName(newName);
+        this.setGrades(newGrade);
     }
 
     public String getName() {
-        return Student.name;
+        return name;
     }
 
     public void setName(String name) {
         Student.name = name;
     }
 
-    public List<Double> getGrades() {
+    public static List<Double> getGrades() {
         return grades;
     }
 
-    public void setGrades(double num) {
-        this.grades.add(num);
+    public void setGrades(List<Double> newGrade) {
+        grades = newGrade;
     }
 
     public static String getAvgGrades() {
-        Collections.sort(grades);
+        Collections.sort(getGrades());
         grades.remove(0);
         double iter = 0;
         for (double number :
