@@ -1,5 +1,6 @@
 package alumni;
 
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,11 +10,17 @@ public class Student {
     private String name;
     private ArrayList<Double> grades = new ArrayList<>();
 
+    private String majorCode;
+
     public Student(String newName, ArrayList<Double> newGrade) {
         this.setName(newName);
         this.setGrades(newGrade);
     }
-
+    public Student(String newName,String majorCode, ArrayList<Double> newGrade) {
+        this.setName(newName);
+        this.setGrades(newGrade);
+        this.setMajorCode(majorCode);
+    }
     public String getName() {
         return name;
     }
@@ -29,6 +36,15 @@ public class Student {
     public void setGrades(ArrayList<Double> newGrade) {
         this.grades = newGrade;
     }
+
+    public String getMajorCode() {
+        return majorCode;
+    }
+
+    public void setMajorCode(String majorCode) {
+        this.majorCode = majorCode;
+    }
+
     public String averageStudent() {
         Collections.sort(getGrade());
         getGrade().remove(0);
@@ -39,5 +55,4 @@ public class Student {
         }
         return df.format(counter / getGrade().size());
     }
-
 }

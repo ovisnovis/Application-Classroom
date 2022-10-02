@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="new version with hobos and it works!">
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="the final version of v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandling/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/Hobos.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alumni/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664639072594</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="the final version of v1">
+      <created>1664709844323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664709844323</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +120,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="nothing new" />
     <MESSAGE value="new version with hobos and it works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="new version with hobos and it works!" />
+    <MESSAGE value="the final version of v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="the final version of v1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
