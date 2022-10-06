@@ -12,22 +12,19 @@ public class Student {
 
     private String majorCode;
 
-    public Student(String newName, ArrayList<Double> newGrade) {
-        this.setName(newName);
-        this.setGrades(newGrade);
-    }
-    public Student(String newName,String majorCode, ArrayList<Double> newGrade) {
+    public Student(String newName, String majorCode, ArrayList<Double> newGrade) {
         this.setName(newName);
         this.setGrades(newGrade);
         this.setMajorCode(majorCode);
     }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-}
+    }
 
     public ArrayList<Double> getGrade() {
         return grades;

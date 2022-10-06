@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="the final version of v2">
-      <change afterPath="$PROJECT_DIR$/src/FileHandling/Checker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Files/grades-v02b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/alumni/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="the final+1 version of v3 and don't forget the +!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandling/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandling/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alumni/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664725024249</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="the final version of v3">
+      <created>1665065271262</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665065271262</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,7 +137,9 @@
     <MESSAGE value="new version with hobos and it works!" />
     <MESSAGE value="the final version of v1" />
     <MESSAGE value="the final version of v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="the final version of v2" />
+    <MESSAGE value="the final version of v3" />
+    <MESSAGE value="the final+1 version of v3 and don't forget the +!" />
+    <option name="LAST_COMMIT_MESSAGE" value="the final+1 version of v3 and don't forget the +!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
