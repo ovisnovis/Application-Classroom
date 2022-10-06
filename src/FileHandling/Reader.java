@@ -1,17 +1,17 @@
 package FileHandling;
 
+import alumni.Course;
 import alumni.Student;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.lang.Double.*;
 
 public class Reader {
     static Scanner scanner;
+
     public static ArrayList<String> readGradesV1() {
         ArrayList<String> dataList = new ArrayList<>();
         try {
@@ -40,6 +40,20 @@ public class Reader {
         return dataList;
     }
 
+    public static ArrayList<String> readGradesV2b() {
+        ArrayList<String> dataList = new ArrayList<>();
+        try {
+            scanner = new Scanner(new File("src/Files/grades-v02b.txt"));
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!");
+        }
+        while (scanner.hasNextLine()) {
+            dataList.add(scanner.nextLine());
+        }
+        scanner.close();
+        return dataList;
+    }
+
     public static HashMap<String, String> readMajors() {
         ArrayList<String> dataList = new ArrayList<>();
         HashMap<String, String> majorMap = new HashMap<>();
@@ -55,7 +69,7 @@ public class Reader {
         for (String keyValue :
                 dataList) {
             String[] split = keyValue.split("\t");
-            majorMap.put(split[0], split[1]);
+            majorMap.put(split[0].trim(), split[1].trim());
         }
         return majorMap;
     }
@@ -68,7 +82,7 @@ public class Reader {
             ArrayList<Double> gradeList = new ArrayList<>();
             for (String insert :
                     splitter) {
-                if (doubleChecker(insert)) {
+                if (Checker.doubleChecker(insert)) {
                     gradeList.add(parseDouble(insert));
                 } else {
                     name = insert;
@@ -88,7 +102,7 @@ public class Reader {
             ArrayList<Double> gradeList = new ArrayList<>();
             for (String insert :
                     splitter) {
-                if (doubleChecker(insert)) {
+                if (Checker.doubleChecker(insert)) {
                     gradeList.add(parseDouble(insert));
                 } else if (readMajors().containsKey(insert.trim())) {
                     majorCode = insert.trim();
@@ -101,25 +115,32 @@ public class Reader {
         return studentsList;
     }
 
-    public static boolean doubleChecker(String toCheck) {
-        boolean bool;
-        try {
-            parseDouble(toCheck);
-            bool = true;
-        } catch (NumberFormatException e) {
-            bool = false;
+    public static Optional<Course> displayCourses() {
+        ArrayList<Student> studentsList = new ArrayList<>();
+        String courseName = "";
+        String courseId = "";
+        for (String who : readGradesV2b()) {
+            String[] splitter = who.split(",");
+            String name = "";
+            String majorCode = "";
+            ArrayList<Double> gradeList = new ArrayList<>();
+            if (splitter.length != 1) {
+                for (String insert :
+                        splitter) {
+                    if (Checker.doubleChecker(insert)) {
+                        gradeList.add(parseDouble(insert));
+                    } else if (readMajors().containsKey(insert.trim())) {
+                        majorCode = insert.trim();
+                    } else {
+                        name = insert.trim();
+                    }
+                }
+                studentsList.add(new Student(name, majorCode, gradeList));
+            } else if (who.trim().matches("[a-zA-Z]*\\p{P}[a-zA-Z]*\\p{P}[a-zA-Z]*\\s\\d*")) {
+                courseId  = who.trim();
+            } else courseName = who.trim();
         }
-        return bool;
-    }
-
-    public static boolean dataChecker(ArrayList<Student> checker) {
-        for (Student student:
-             checker) {
-            if (student == null) {
-                return false;
-            }
-        }
-        return true;
+        return Optional.of(new Course(courseId,courseName,studentsList));
     }
 
 }
