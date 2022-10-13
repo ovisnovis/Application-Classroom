@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 
 public class Checker {
+    private final File fileScn;
+    private Scanner scanner;
+
     public Checker(File fileScn) {
         this.fileScn = fileScn;
     }
@@ -16,9 +19,6 @@ public class Checker {
     public File getFileScn() {
         return fileScn;
     }
-
-    private final File fileScn;
-    private static  Scanner scanner;
 
     public HashMap<String, String> readMajors() {
         ArrayList<String> dataList = new ArrayList<>();

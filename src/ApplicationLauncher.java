@@ -9,7 +9,7 @@ import java.io.File;
 public class ApplicationLauncher {
     public static void main(String[] args) {
         Checker checker = new Checker(new File("src/Files/major-map.txt"));
-        Reader reader = new Reader(new File("src/Files/grades-v02b.txt"));
+        Reader reader = new Reader(new File("src/Files/grades-v02b.txt"), checker);
         if (reader.displayCourses().isPresent()) {
             Course course = reader.displayCourses().get();
             System.out.println("The number of students read: " + course.assignedStudents().size());
@@ -28,5 +28,4 @@ public class ApplicationLauncher {
         }
 
     }
-//toString()
 }

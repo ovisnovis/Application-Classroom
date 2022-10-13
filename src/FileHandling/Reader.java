@@ -10,21 +10,22 @@ import java.util.*;
 import static java.lang.Double.*;
 
 public class Reader {
-    private File fileScn;
+    private final File fileScn;
+    private final Checker checker;
+
+    public Reader(File fileScn, Checker checker ) {
+        this.fileScn = fileScn;
+        this.checker = checker;
+    }
 
     public File getFileScn() {
         return fileScn;
     }
 
-    public Reader(File fileScn) {
-        this.fileScn = fileScn;
-    }
-
-    static Scanner scanner;
-
 
     public Optional<Course> displayCourses() {
         ArrayList<String> dataList = new ArrayList<>();
+        Scanner scanner;
         try {
             scanner = new Scanner(getFileScn());
         } catch (FileNotFoundException e) {
@@ -36,7 +37,6 @@ public class Reader {
         }
         scanner.close();
         ArrayList<Student> studentsList = new ArrayList<>();
-        Checker checker = new Checker(new File("src/Files/major-map.txt"));
         String courseName = "";
         String courseId = "";
         for (String who : dataList) {
@@ -62,7 +62,7 @@ public class Reader {
         }
         return Optional.of(new Course(courseId, courseName, studentsList));
     }
-    private static boolean doubleChecker(String toCheck) {
+    private boolean doubleChecker(String toCheck) {
         boolean bool;
         try {
             parseDouble(toCheck);

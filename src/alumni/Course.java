@@ -3,6 +3,7 @@ package alumni;
 import java.util.ArrayList;
 import java.util.Objects;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class Course {
     private final String id;
     private final String name;
