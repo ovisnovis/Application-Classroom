@@ -43,4 +43,13 @@ public class Student {
         }
         return df.format(counter / getGrade().size());
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grades=" + grades +
+                ", majorCode='" + majorCode + '\'' +
+                '}';
+    }
 }

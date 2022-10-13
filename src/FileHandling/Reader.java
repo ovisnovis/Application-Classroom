@@ -10,33 +10,23 @@ import java.util.*;
 import static java.lang.Double.*;
 
 public class Reader {
-    static Scanner scanner;
+    private File fileScn;
 
-    public static HashMap<String, String> readMajors() {
-        ArrayList<String> dataList = new ArrayList<>();
-        HashMap<String, String> majorMap = new HashMap<>();
-        try {
-            scanner = new Scanner(new File("src/Files/major-map.txt"));
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found!");
-        }
-        while (scanner.hasNextLine()) {
-            dataList.add(scanner.nextLine());
-        }
-        scanner.close();
-        for (String keyValue :
-                dataList) {
-            String[] split = keyValue.split("\t");
-            majorMap.put(split[0].trim(), split[1].trim());
-        }
-        return majorMap;
+    public File getFileScn() {
+        return fileScn;
     }
 
+    public Reader(File fileScn) {
+        this.fileScn = fileScn;
+    }
 
-    public static Optional<Course> displayCourses() {
+    static Scanner scanner;
+
+
+    public Optional<Course> displayCourses() {
         ArrayList<String> dataList = new ArrayList<>();
         try {
-            scanner = new Scanner(new File("src/Files/grades-v02b.txt"));
+            scanner = new Scanner(getFileScn());
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
             return Optional.empty();
@@ -46,6 +36,7 @@ public class Reader {
         }
         scanner.close();
         ArrayList<Student> studentsList = new ArrayList<>();
+        Checker checker = new Checker(new File("src/Files/major-map.txt"));
         String courseName = "";
         String courseId = "";
         for (String who : dataList) {
@@ -56,9 +47,9 @@ public class Reader {
             if (splitter.length != 1) {
                 for (String insert :
                         splitter) {
-                    if (Checker.doubleChecker(insert)) {
+                    if (doubleChecker(insert)) {
                         gradeList.add(parseDouble(insert));
-                    } else if (readMajors().containsKey(insert.trim())) {
+                    } else if (checker.readMajors().containsKey(insert.trim())) {
                         majorCode = insert.trim();
                     } else if (insert.matches("^[A-Z][a-z]+\\s[A-Z][a-z]+")) {
                         name = insert.trim();
@@ -71,5 +62,16 @@ public class Reader {
         }
         return Optional.of(new Course(courseId, courseName, studentsList));
     }
+    private static boolean doubleChecker(String toCheck) {
+        boolean bool;
+        try {
+            parseDouble(toCheck);
+            bool = true;
+        } catch (NumberFormatException e) {
+            bool = false;
+        }
+        return bool;
+    }
+
 
 }
