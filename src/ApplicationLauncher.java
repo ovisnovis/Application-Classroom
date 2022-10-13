@@ -5,13 +5,13 @@ import alumni.Student;
 
 public class ApplicationLauncher {
     public static void main(String[] args) {
-        Course course = Reader.displayCourses().get();
         if (Reader.displayCourses().isPresent()) {
-            System.out.println("The number of students read: " + course.getAssignedStudents().size());
-            System.out.println("Grades for " + course.getName() + " (" + course.getId() + ")");
+            Course course = Reader.displayCourses().get();
+            System.out.println("The number of students read: " + course.assignedStudents().size());
+            System.out.println("Grades for " + course.name() + " (" + course.id() + ")");
             System.out.println("-------------------------------------------------------------");
             for (Student student :
-                    course.getAssignedStudents()) {
+                    course.assignedStudents()) {
                 System.out.println("The average grade for " + student.getName() + " (" +
                         Reader.readMajors().get(student.getMajorCode()) +
                         ") is: " + student.averageStudent());
@@ -22,5 +22,5 @@ public class ApplicationLauncher {
         }
 
     }
-
+//toString()
 }

@@ -7,40 +7,31 @@ import java.util.Collections;
 
 public class Student {
     private static final DecimalFormat df = new DecimalFormat("0.00");
-    private String name;
-    private ArrayList<Double> grades = new ArrayList<>();
+    private final String name;
+    private final ArrayList<Double> grades;
 
-    private String majorCode;
+    private final String majorCode;
 
-    public Student(String newName, String majorCode, ArrayList<Double> newGrade) {
-        this.setName(newName);
-        this.setGrades(newGrade);
-        this.setMajorCode(majorCode);
+    public Student(String name, String majorCode, ArrayList<Double> grades) {
+        this.name = name;
+        this.majorCode = majorCode;
+        this.grades = grades;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public ArrayList<Double> getGrade() {
         return grades;
     }
 
-    public void setGrades(ArrayList<Double> newGrade) {
-        this.grades = newGrade;
-    }
 
     public String getMajorCode() {
         return majorCode;
     }
 
-    public void setMajorCode(String majorCode) {
-        this.majorCode = majorCode;
-    }
 
     public String averageStudent() {
         Collections.sort(getGrade());
