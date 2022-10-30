@@ -7,15 +7,17 @@ import alumni.StudentRepeating;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.util.Scanner;
 
-import static java.lang.Double.*;
+import static java.lang.Double.parseDouble;
 
-public class Reader {
+public class ReaderCSV implements DataReader {
     private final File fileScn;
     private final Checker checker;
 
-    public Reader(File fileScn, Checker checker) {
+    public ReaderCSV(File fileScn, Checker checker) {
         this.fileScn = fileScn;
         this.checker = checker;
     }
@@ -78,17 +80,6 @@ public class Reader {
             } else courseName = who.trim();
         }
         return Optional.of(new Course(courseId, courseName, studentsList));
-    }
-
-    private boolean doubleChecker(String toCheck) {
-        boolean bool;
-        try {
-            parseDouble(toCheck);
-            bool = true;
-        } catch (NumberFormatException e) {
-            bool = false;
-        }
-        return bool;
     }
 
 

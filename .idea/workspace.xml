@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V4 final polish">
-      <change afterPath="$PROJECT_DIR$/Files/grades-v01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/grades-v02.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/grades-v02b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/grades-v03.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/major-map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/alumni/StudentRegular.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/alumni/StudentRepeating.java" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V5">
+      <change afterPath="$PROJECT_DIR$/Files/grades-v04.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/grades-v04.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileHandling/DataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileHandling/ReaderTagValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/grades-v01.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/grades-v02.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/grades-v02b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Files/major-map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandling/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/ReaderCSV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,6 +43,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2FBUVB2Hk3bJt2APhJwIywDS94W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -73,11 +69,15 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="FileHandling" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="FileHandling" />
       <recent name="alumni" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ApplicationLauncher">
     <configuration name="ApplicationLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ApplicationLauncher" />
       <module name="Application Classroom" />
@@ -85,9 +85,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReaderTagValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileHandling.ReaderTagValue" />
+      <module name="Application Classroom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FileHandling.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationLauncher" />
+        <item itemvalue="Application.ReaderTagValue" />
       </list>
     </recent_temporary>
   </component>
@@ -163,8 +177,18 @@
       <option name="project" value="LOCAL" />
       <updated>1665700552279</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="V5">
+      <created>1666275426097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666275426097</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -188,7 +212,18 @@
     <MESSAGE value="refactored v3 without setters!" />
     <MESSAGE value="V4 fertig" />
     <MESSAGE value="V4 final polish" />
-    <option name="LAST_COMMIT_MESSAGE" value="V4 final polish" />
+    <MESSAGE value="V5" />
+    <option name="LAST_COMMIT_MESSAGE" value="V5" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
