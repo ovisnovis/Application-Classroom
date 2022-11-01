@@ -58,7 +58,8 @@ public class ReaderTagValue implements DataReader {
         for (String stringItr :
                 stringSaver.split("(?=name:)")) {
             scnTwo = new Scanner(stringItr);
-            String name = scnTwo.findInLine("(?<=name: )\\w+\\s\\w+");
+            String name = stringItr
+                    .substring(stringItr.indexOf("name: ") + 6, stringItr.indexOf("major")-1);
             String majorCode = scnTwo.findInLine("(?<=major: )\\w{2}");
             double examGrade = parseDouble(scnTwo.findInLine("(?<=exam-grade: )\\d\\.*\\d*")
                     .replaceAll("exam-grade: ", ""));
