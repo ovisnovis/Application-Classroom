@@ -9,7 +9,6 @@ import static java.lang.Double.parseDouble;
 
 public interface DataReader {
     File getFileScn();
-
     Optional<Course> displayCourses();
 
     default boolean doubleChecker(String toCheck) {
@@ -22,4 +21,5 @@ public interface DataReader {
         }
         return bool;
     }
+
 }

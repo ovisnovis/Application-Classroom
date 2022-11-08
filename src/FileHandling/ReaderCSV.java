@@ -15,11 +15,9 @@ import static java.lang.Double.parseDouble;
 
 public class ReaderCSV implements DataReader {
     private final File fileScn;
-    private final Checker checker;
 
-    public ReaderCSV(File fileScn, Checker checker) {
+    public ReaderCSV(File fileScn) {
         this.fileScn = fileScn;
-        this.checker = checker;
     }
 
     public File getFileScn() {
@@ -54,7 +52,7 @@ public class ReaderCSV implements DataReader {
                         splitter) {
                     if (doubleChecker(insert.trim())) {
                         examGrade = parseDouble(insert);
-                    } else if (checker.readMajors().containsKey(insert.trim())) {
+                    } else if (insert.trim().matches("[a-z]{2}")) {
                         majorCode = insert.trim();
                     } else if (insert.matches("^[A-ZÄÖÜ][a-zäöü]+\\s[A-ZÄÖÜ][a-zäöü]+")) {
                         name = insert.trim();
@@ -68,7 +66,7 @@ public class ReaderCSV implements DataReader {
                         examGrade = parseDouble(insert);
                     } else if (doubleChecker(insert)) {
                         gradeList.add(parseDouble(insert));
-                    } else if (checker.readMajors().containsKey(insert.trim())) {
+                    } else if (insert.trim().matches("[a-z]{2}")) {
                         majorCode = insert.trim();
                     } else if (insert.matches("^[A-ZÄÖÜ][a-zäöü]+\\s[A-ZÄÖÜ][a-zäöü]+")) {
                         name = insert.trim();
