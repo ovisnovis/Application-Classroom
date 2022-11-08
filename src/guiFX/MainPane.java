@@ -1,7 +1,6 @@
 package guiFX;
 
-import FileHandling.ReaderCSV;
-import FileHandling.ReaderTagValue;
+import FileHandling.ReaderFactory;
 import alumni.Course;
 import alumni.Student;
 import alumni.StudentRegular;
@@ -76,7 +75,9 @@ public class MainPane extends Pane {
         loadButton.setOnAction(event -> {
             FileChooser fileChooser = new FileChooser();
             File dataFile = fileChooser.showOpenDialog(null);
-            fileLamb(dataFile);
+            course = new ReaderFactory(dataFile).getCourse();
+            courseStudents = course.assignedStudents();
+            textArea.setText(courseText());
         });
         gradeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             if (course == null) {
@@ -93,35 +94,10 @@ public class MainPane extends Pane {
         });
     }
 
-    public void fileLamb(File dataFile) {
-        if (dataFile.getName().endsWith(".txt")) {
-            ReaderTagValue readerTagValue = new ReaderTagValue(dataFile);
-            if (readerTagValue.displayCourses().isPresent()) {
-                course = readerTagValue.displayCourses().get();
-                courseStudents = course.assignedStudents();
-                textArea.setText(courseText());
-            }
-        } else if (dataFile.getName().endsWith(".csv")) {
-            ReaderCSV readerCSV = new ReaderCSV(dataFile);
-            if (readerCSV.displayCourses().isPresent()) {
-                course = readerCSV.displayCourses().get();
-                courseStudents = course.assignedStudents();
-                textArea.setText(courseText());
-            }
-        } else System.out.println("not known file type!");
-    }
-
     public String courseText() {
         StringBuilder std = new StringBuilder(course.name() + "\n" + course.id() + "\n\n");
-        for (Student student :
-                courseStudents) {
-            if (student instanceof StudentRegular) {
-                std.append(student.getName()).append(" (").append(student.getMajorCode()).append("): ")
-                        .append(df.format(student.getExamGrade())).append("\n");
-            } else std.append(student.getName()).append("* (").append(student.getMajorCode())
-                    .append("): ").append(student.getExamGrade()).append("\n");
-
-        }
+        courseStudents.forEach(student -> std.append(student.getName()).append(" (").append(student.getMajorCode())
+                .append("): ").append(student.getExamGrade()).append("\n"));
         return std.toString();
     }
 }

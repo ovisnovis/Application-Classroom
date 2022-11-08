@@ -8,9 +8,12 @@ public class StudentRepeating extends Student {
     }
 
     public String toString() {
-        return "The average grade for " + getName() + "* (" +
+        return "The average grade for " + getName() + " (" +
                 getMajorCode() +
                 ") is: " + getExamGrade();
+    }
+    public String getName(){
+        return super.getName() + "*";
     }
 
 }

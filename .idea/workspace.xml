@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 no comment">
-      <change afterPath="$PROJECT_DIR$/Files/school.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiFX/FXApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 no comments....">
+      <change afterPath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling/ReaderCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/ReaderCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alumni/StudentRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alumni/StudentRepeating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRepeating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -247,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667292631417</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="V7 no comments....">
+      <created>1667903997046</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667903997046</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -311,7 +314,8 @@
     <MESSAGE value="V6 was heavy af..." />
     <MESSAGE value="V6 better solution with scanner" />
     <MESSAGE value="V7 no comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="V7 no comment" />
+    <MESSAGE value="V7 no comments...." />
+    <option name="LAST_COMMIT_MESSAGE" value="V7 no comments...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -37,7 +37,7 @@ public class StudentRegular extends Student {
     }
 
     public double getExamGrade() {
-        return super.getExamGrade() * (1 - preFactor) + getPreGrade() * preFactor;
+        return Double.parseDouble(df.format(super.getExamGrade() * (1 - preFactor) + getPreGrade() * preFactor));
     }
 
 }
