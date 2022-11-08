@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 no comments....">
-      <change afterPath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 final version....">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/StudentRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/StudentRepeating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRepeating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667903997046</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="V7 final version....">
+      <created>1667917975497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667917975497</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -315,7 +319,8 @@
     <MESSAGE value="V6 better solution with scanner" />
     <MESSAGE value="V7 no comment" />
     <MESSAGE value="V7 no comments...." />
-    <option name="LAST_COMMIT_MESSAGE" value="V7 no comments...." />
+    <MESSAGE value="V7 final version...." />
+    <option name="LAST_COMMIT_MESSAGE" value="V7 final version...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
