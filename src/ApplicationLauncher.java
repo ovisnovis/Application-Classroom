@@ -1,4 +1,3 @@
-import FileHandling.Checker;
 import FileHandling.ReaderCSV;
 import FileHandling.ReaderTagValue;
 import alumni.Course;
@@ -10,8 +9,7 @@ import java.util.Scanner;
 
 public class ApplicationLauncher {
     public static void main(String[] args) {
-        Checker checker = new Checker(new File("Files/major-map.txt"));
-        ReaderCSV readerCSV = new ReaderCSV(new File("Files/grades-v04.csv"), checker);
+        ReaderCSV readerCSV = new ReaderCSV(new File("Files/grades-v04.csv"));
         ReaderTagValue readerTagValue = new ReaderTagValue(new File("Files/grades-v04.txt"));
         Scanner choose = new Scanner(System.in);
         System.out.print("enter '1' for the CSV and '2' for the TVF: ");
@@ -48,4 +46,5 @@ public class ApplicationLauncher {
             }
         }
     }
+
 }

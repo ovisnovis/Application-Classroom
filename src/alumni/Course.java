@@ -42,12 +42,4 @@ public final class Course {
         return Objects.hash(id, name, assignedStudents);
     }
 
-    @Override
-    public String toString() {
-        return "Course[" +
-                "id=" + id + ", " +
-                "name=" + name + ", " +
-                "assignedStudents=" + assignedStudents + ']';
-    }
-
 }

@@ -6,35 +6,38 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class StudentRegular extends Student {
-    private final DecimalFormat df = new DecimalFormat("0.00");
 
-    private final ArrayList<Double> grades;
+    private final DecimalFormat df = new DecimalFormat("#.##");
+
+    private final double preGrade;
+    public double preFactor = .3;
 
 
     public StudentRegular(String name, String majorCode, double examGrade, ArrayList<Double> grades) {
         super(name, majorCode, examGrade);
-        this.grades = grades;
-    }
-
-    public ArrayList<Double> getGrade() {
-        return grades;
-    }
-
-
-    public String averageStudent() {
-        Collections.sort(getGrade());
-        getGrade().remove(0);
+        Collections.sort(grades);
+        grades.remove(0);
         double counter = 0;
-        for (double i :
-                getGrade()) {
-            counter += i;
+        for (double dd :
+                grades) {
+            counter += dd;
         }
-        return df.format(counter / getGrade().size() * .3 + super.getExamGrade() * .7);
+        this.preGrade = counter / grades.size();
     }
+
+    public double getPreGrade() {
+        return preGrade;
+    }
+
 
     public String toString() {
         return "The average grade for " + getName() + " (" +
                 getMajorCode() +
-                ") is: " + averageStudent();
+                ") is: " + df.format(getExamGrade());
     }
+
+    public double getExamGrade() {
+        return Double.parseDouble(df.format(super.getExamGrade() * (1 - preFactor) + getPreGrade() * preFactor));
+    }
+
 }

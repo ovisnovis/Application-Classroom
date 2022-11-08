@@ -52,34 +52,31 @@ public class ReaderTagValue implements DataReader {
             } else if (itrStr.matches(courseName)) {
                 courseName = itrStr.replaceAll("course-name:", "").trim();
                 who.remove();
-            } else stringSaver = stringSaver.concat(itrStr);
+            } else stringSaver = stringSaver.concat(itrStr + " ");
         }
-        for (String s : stringSaver.split("(?=name:)")) {
-            String name = s.substring(s.indexOf("name: ") + 6, s.indexOf("major"));
-            String majorCode = s.substring(s.indexOf("major: ") + 7, s.indexOf("is_"));
-            if (s.matches("(.*)true(.*)")) {
-                studentsList.add(new StudentRepeating(
-                        name,
-                        majorCode,
-                        parseDouble(s.substring(s.indexOf("exam-grade: ") + 12))));
+        Scanner scnTwo;
+        for (String stringItr :
+                stringSaver.split("(?=name:)")) {
+            scnTwo = new Scanner(stringItr);
+            String name = stringItr
+                    .substring(stringItr.indexOf("name: ") + 6, stringItr.indexOf("major")-1);
+            String majorCode = scnTwo.findInLine("(?<=major: )\\w{2}");
+            double examGrade = parseDouble(scnTwo.findInLine("(?<=exam-grade: )\\d\\.*\\d*")
+                    .replaceAll("exam-grade: ", ""));
+            if (stringItr.matches("(.*)true(.*)")) {
+                studentsList.add(new StudentRepeating(name, majorCode, examGrade));
             } else {
                 ArrayList<Double> gradeList = new ArrayList<>();
-                String saveGradeList = s.substring(s.indexOf("pre-grade: ") + 11);
+                String saveGradeList = scnTwo.findInLine("(?<=pre-grade: ).*");
                 for (String s2 :
                         saveGradeList.split(",")) {
-                    if (doubleChecker(s2)) {
-                        gradeList.add(parseDouble(s2));
+                    if (doubleChecker(s2.trim())) {
+                        gradeList.add(parseDouble(s2.trim()));
                     }
                 }
-                studentsList.add(new StudentRegular(
-                        name,
-                        majorCode,
-                        parseDouble(s.substring(s.indexOf("exam-grade: ") + 12, s.indexOf("pre-"))),
-                        gradeList));
+                studentsList.add(new StudentRegular(name, majorCode, examGrade, gradeList));
             }
         }
-
         return Optional.of(new Course(courseId, courseName, studentsList));
     }
-
 }
