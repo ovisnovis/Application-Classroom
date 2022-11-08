@@ -8,7 +8,10 @@ public class ReaderFactory {
     private Course course;
 
     public ReaderFactory(File file) {
-        if (file.getName().endsWith(".txt")) {
+        if (file == null) {
+            System.out.println("No file selected");
+            this.course = new Course("","",null);
+        } else if (file.getName().endsWith(".txt")) {
             ReaderTagValue readerTagValue = new ReaderTagValue(file);
             if (readerTagValue.displayCourses().isPresent()) {
                 this.course = readerTagValue.displayCourses().get();

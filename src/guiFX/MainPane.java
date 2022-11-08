@@ -19,7 +19,6 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainPane extends Pane {
@@ -35,7 +34,6 @@ public class MainPane extends Pane {
     HBox horizontalBox3 = new HBox(300);
     VBox verticalBox = new VBox(500);
     Course course;
-    ArrayList<Student> courseStudents;
     private final DecimalFormat df = new DecimalFormat("#.##");
 
     public MainPane(HashMap<String, String> majorMap) {
@@ -73,10 +71,8 @@ public class MainPane extends Pane {
         textArea.setFont(new Font("Cambria", 16));
 
         loadButton.setOnAction(event -> {
-            FileChooser fileChooser = new FileChooser();
-            File dataFile = fileChooser.showOpenDialog(null);
+            File dataFile = new FileChooser().showOpenDialog(null);
             course = new ReaderFactory(dataFile).getCourse();
-            courseStudents = course.assignedStudents();
             textArea.setText(courseText());
         });
         gradeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
@@ -84,7 +80,7 @@ public class MainPane extends Pane {
                 return;
             }
             for (Student student :
-                    courseStudents) {
+                    course.assignedStudents()) {
                 if (student instanceof StudentRegular) {
                     ((StudentRegular) student).preFactor = newValue.doubleValue();
                 }
@@ -96,7 +92,7 @@ public class MainPane extends Pane {
 
     public String courseText() {
         StringBuilder std = new StringBuilder(course.name() + "\n" + course.id() + "\n\n");
-        courseStudents.forEach(student -> std.append(student.getName()).append(" (").append(student.getMajorCode())
+        course.assignedStudents().forEach(student -> std.append(student.getName()).append(" (").append(student.getMajorCode())
                 .append("): ").append(student.getExamGrade()).append("\n"));
         return std.toString();
     }
