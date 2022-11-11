@@ -7,7 +7,7 @@ import java.util.Collections;
 
 public class StudentRegular extends Student {
 
-    private final DecimalFormat df = new DecimalFormat("#.##");
+    private final DecimalFormat df = new DecimalFormat("#.#");
 
     private final double preGrade;
     public double preFactor = .3;

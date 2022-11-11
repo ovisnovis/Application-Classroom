@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 final version....">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="v7 so fetig jetzt">
+      <change afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alumni/StudentRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/FXApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/FXApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
       <recent name="FileHandling" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="guiFX" />
       <recent name="FileHandling" />
       <recent name="alumni" />
     </key>
