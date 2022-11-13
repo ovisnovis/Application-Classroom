@@ -1,14 +1,10 @@
 package guiFX;
 
-import FileHandling.Checker;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.File;
 
 public class FXApp extends Application {
 
@@ -19,12 +15,9 @@ public class FXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Checker checker = new Checker(new File("Files/major-map.txt"));
-        MainPane noPaneNoMain = new MainPane(checker.readMajors());
-        noPaneNoMain.getChildren().addAll(noPaneNoMain.verticalBox);
-        FlowPane flowPane = new FlowPane(noPaneNoMain);
-        StackPane rootPane = new StackPane(flowPane);
-        Scene scene = new Scene(rootPane, 407, 382);
+        MainPane mainPane = new MainPane();
+        mainPane.getChildren().addAll(mainPane.splitPane);
+        Scene scene = new Scene(mainPane, 1024, 382);
         primaryStage.setScene(scene);
         primaryStage.getIcons()
                 .add(new Image("C:\\Users\\andre\\Documents\\IdeaProjects\\" +

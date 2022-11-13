@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="V7 final version....">
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment=".1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +74,7 @@
       <recent name="FileHandling" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="guiFX" />
       <recent name="FileHandling" />
       <recent name="alumni" />
     </key>
@@ -142,10 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FXApp" />
-        <item itemvalue="Application.ApplicationLauncher" />
-        <item itemvalue="Application.Course" />
-        <item itemvalue="Application.MainPane" />
         <item itemvalue="Application.ReaderTagValue" />
+        <item itemvalue="Application.MainPane" />
+        <item itemvalue="Application.Course" />
+        <item itemvalue="Application.ApplicationLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667917975497</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="v8">
+      <created>1668353578063</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668353578063</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -322,7 +329,8 @@
     <MESSAGE value="V7 no comment" />
     <MESSAGE value="V7 no comments...." />
     <MESSAGE value="V7 final version...." />
-    <option name="LAST_COMMIT_MESSAGE" value="V7 final version...." />
+    <MESSAGE value="v8" />
+    <option name="LAST_COMMIT_MESSAGE" value="v8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
