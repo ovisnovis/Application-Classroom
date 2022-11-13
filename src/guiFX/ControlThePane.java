@@ -1,6 +1,5 @@
 package guiFX;
 
-import FileHandling.ReaderFactory;
 import alumni.Course;
 import alumni.Student;
 import alumni.StudentRegular;
@@ -15,9 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.stage.FileChooser;
 
-import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -69,13 +66,6 @@ public class ControlThePane extends Pane {
         textArea.setStyle("fx-background-color: #658b8c; -fx-opacity: 0.7");
         textArea.setFont(new Font("Cambria", 16));
 
-        loadButton.setOnAction(event -> {
-            FileChooser fileChooser = new FileChooser();
-            File dataFile = fileChooser.showOpenDialog(null);
-            course = new ReaderFactory(dataFile).getCourse();
-            courseStudents = course.assignedStudents();
-            textArea.setText(courseText());
-        });
         gradeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             if (course == null) {
                 return;

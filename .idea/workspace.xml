@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="v7 so fetig jetzt">
-      <change afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" afterDir="false" />
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment=".1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alumni/StudentRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alumni/StudentRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiFX/FXApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/FXApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,10 +144,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FXApp" />
-        <item itemvalue="Application.ApplicationLauncher" />
-        <item itemvalue="Application.Course" />
-        <item itemvalue="Application.MainPane" />
         <item itemvalue="Application.ReaderTagValue" />
+        <item itemvalue="Application.MainPane" />
+        <item itemvalue="Application.Course" />
+        <item itemvalue="Application.ApplicationLauncher" />
       </list>
     </recent_temporary>
   </component>

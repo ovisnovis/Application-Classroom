@@ -1,26 +1,44 @@
 package guiFX;
 
 
+import FileHandling.ReaderFactory;
 import javafx.geometry.Orientation;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
 
-import java.util.HashMap;
+import java.io.File;
 
 public class MainPane extends StackPane {
-    public HashMap<String, String> majorMap;
-    public MainPane(HashMap<String, String> majorMap) {
-        this.majorMap = majorMap;
+    SplitPane splitPane;
+    ControlThePane controlThePane;
+    GraphicsPane graphicsPane;
+
+    public MainPane() {
         makePane();
     }
 
     public void makePane() {
-        ControlThePane controlThePane = new ControlThePane();
-        GraphicsPane graphicsPane = new GraphicsPane(controlThePane.courseStudents);
-        SplitPane splitPane = new SplitPane(controlThePane, graphicsPane);
+
+        controlThePane = new ControlThePane();
+        graphicsPane = new GraphicsPane(controlThePane.courseStudents);
+        controlThePane.loadButton.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            File dataFile = fileChooser.showOpenDialog(null);
+            controlThePane.course = new ReaderFactory(dataFile).getCourse();
+            controlThePane.courseStudents = controlThePane.course.assignedStudents();
+            controlThePane.textArea.setText(controlThePane.courseText());
+            if (controlThePane.courseStudents != null) {
+                graphicsPane.setCourseStudents(controlThePane.courseStudents);
+            }
+        });
+        controlThePane.gradeSlider.valueProperty().addListener(observable ->
+                graphicsPane.setCourseStudents(controlThePane.courseStudents)
+        );
+        splitPane = new SplitPane(controlThePane.verticalBox, graphicsPane);
         splitPane.setOrientation(Orientation.HORIZONTAL);
-        splitPane.setDividerPosition(0, 0.2);
+        splitPane.setDividerPosition(0, 0.4);
     }
 
-
 }
+

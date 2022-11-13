@@ -3,7 +3,6 @@ package guiFX;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
@@ -16,14 +15,15 @@ public class FXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Pane control = new ControlThePane();
-        Scene scene = new Scene(control, 407, 382);
+        MainPane mainPane = new MainPane();
+        mainPane.getChildren().addAll(mainPane.splitPane);
+        Scene scene = new Scene(mainPane, 1024, 382);
         primaryStage.setScene(scene);
         primaryStage.getIcons()
                 .add(new Image("C:\\Users\\andre\\Documents\\IdeaProjects\\" +
                         "Application-Classroom\\Files\\school.jpg"));
         primaryStage.setTitle("Application Classroom!");
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
