@@ -29,6 +29,8 @@ public class MainPane extends StackPane {
             controlThePane.courseStudents = controlThePane.course.assignedStudents();
             controlThePane.textArea.setText(controlThePane.courseText());
             if (controlThePane.courseStudents != null) {
+                controlThePane.labelStudents
+                        .setText("Students in course: " + controlThePane.courseStudents.size());
                 graphicsPane.setCourseStudents(controlThePane.courseStudents);
             }
         });

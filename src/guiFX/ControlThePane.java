@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class ControlThePane extends Pane {
     Button loadButton = new Button("Load");
-    Label labelStudents = new Label("Get course");
+    Label labelStudents = new Label("Get course ->");
     Label labelGrade = new Label("Students");
     Label labelSlider = new Label("Pre-Grade weight: 0.3");
     TextArea textArea = new TextArea();
