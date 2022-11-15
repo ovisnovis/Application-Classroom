@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment=".1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
-    </list>
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment=".1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,10 +138,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FXApp" />
+        <item itemvalue="Application.ApplicationLauncher" />
         <item itemvalue="Application.ReaderTagValue" />
         <item itemvalue="Application.MainPane" />
         <item itemvalue="Application.Course" />
-        <item itemvalue="Application.ApplicationLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +276,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="scannerRegex" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -298,12 +294,22 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="scannerRegex" />
+                  <option value="develop" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="scannerRegex" />
                 </option>
               </RecentGroup>
             </list>
