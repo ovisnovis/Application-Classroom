@@ -1,5 +1,6 @@
 import FileHandling.ReaderFactory;
 import alumni.Course;
+
 import java.io.File;
 
 
@@ -12,5 +13,4 @@ public class ApplicationLauncher {
         course.assignedStudents().forEach(System.out::println);
         System.out.println("-------------------------------------------------------------");
     }
-
 }
