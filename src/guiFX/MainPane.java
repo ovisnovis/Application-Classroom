@@ -25,14 +25,14 @@ public class MainPane extends StackPane {
         controlThePane.loadButton.setOnAction(event -> {
             FileChooser fileChooser = new FileChooser();
             File dataFile = fileChooser.showOpenDialog(null);
-            controlThePane.course = new ReaderFactory(dataFile).getCourse();
-            controlThePane.courseStudents = controlThePane.course.assignedStudents();
-            controlThePane.textArea.setText(controlThePane.courseText());
-            if (controlThePane.courseStudents != null) {
+            if (dataFile != null) {
+                controlThePane.course = new ReaderFactory(dataFile).getCourse();
+                controlThePane.courseStudents = controlThePane.course.assignedStudents();
+                controlThePane.textArea.setText(controlThePane.courseText());
                 controlThePane.labelStudents
                         .setText("Students in course: " + controlThePane.courseStudents.size());
                 graphicsPane.setCourseStudents(controlThePane.courseStudents);
-            }
+            } else System.out.println("no file selected");
         });
         controlThePane.gradeSlider.valueProperty().addListener(observable ->
                 graphicsPane.setCourseStudents(controlThePane.courseStudents)

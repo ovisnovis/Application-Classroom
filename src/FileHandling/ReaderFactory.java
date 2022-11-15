@@ -18,7 +18,11 @@ public class ReaderFactory {
             if (readerCSV.displayCourses().isPresent()) {
                 this.course = readerCSV.displayCourses().get();
             }
-        } else System.out.println("not known file type!");
+        } else {
+            System.out.println("not known file type!");
+            this.course = null;
+        }
+
     }
 
     public Course getCourse() {
