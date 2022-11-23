@@ -25,7 +25,7 @@ public class StateModel {
         return course;
     }
 
-    public void setSort(boolean sort) {
+    public void sorted(boolean sort) {
         if (!sort) this.course.assignedStudents().sort(Comparator.comparing(Student::getName));
         sendStateChangedEvent();
     }

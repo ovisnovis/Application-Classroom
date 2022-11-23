@@ -21,6 +21,7 @@ public class MainPane extends StackPane {
         splitPane = new SplitPane(controlThePane, graphicsPane);
         splitPane.setOrientation(Orientation.HORIZONTAL);
         splitPane.setDividerPosition(0, 0.4);
+        getChildren().add(splitPane);
     }
 
 }

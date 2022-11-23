@@ -40,6 +40,7 @@ public class ControlThePane extends Pane {
     }
 
     public void makePane() {
+        //artefacts in initialisation
         labelGrade.setTextFill(Color.web("#beede4"));
         labelSlider.setTextFill(Color.web("#beede4"));
         labelStudents.setTextFill(Color.web("#beede4"));
@@ -67,7 +68,9 @@ public class ControlThePane extends Pane {
         textArea.setPrefSize(300, 250);
         textArea.setStyle("fx-background-color: #658b8c; -fx-opacity: 0.7");
         textArea.setFont(new Font("Cambria", 16));
-
+        getChildren().add(verticalBox);
+        //logic of artefact
+        stateModel.addObserver(() -> textArea.setText(courseText()));
         gradeSlider.valueProperty().addListener((observable) -> {
             if (stateModel.getCourse() == null) {
                 return;
@@ -93,10 +96,10 @@ public class ControlThePane extends Pane {
                         .setText("Students in course: " + stateModel.getCourse().assignedStudents().size());
             }
         });
-        getChildren().add(verticalBox);
     }
 
     public String courseText() {
+        //generate text
         StringBuilder std = new StringBuilder(stateModel.getCourse().name() + "\n" +
                 stateModel.getCourse().id() + "\n\n");
         stateModel.getCourse().assignedStudents().forEach(student -> std.append(student

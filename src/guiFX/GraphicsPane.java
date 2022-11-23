@@ -22,6 +22,7 @@ public class GraphicsPane extends Pane {
 
     public GraphicsPane(StateModel stateModel) {
         this.stateModel = stateModel;
+        //add a listener to the graphic pane while object creation
         stateModel.addObserver(() -> {
             Course course = stateModel.getCourse();
             draw(course);
@@ -31,7 +32,7 @@ public class GraphicsPane extends Pane {
                     if (stateModel.getCourse() == null) {
                         return;
                     }
-                    stateModel.setSort(checkBox.isSelected());
+                    stateModel.sorted(checkBox.isSelected());
                 }
         );
         getChildren().add(checkBox);
@@ -39,6 +40,7 @@ public class GraphicsPane extends Pane {
 
 
     public void draw(Course course) {
+        //draw grade bars and add all children to the pane
         getChildren().clear();
         getChildren().add(checkBox);
         if (course != null) {
