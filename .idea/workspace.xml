@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment=".1">
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="gzv8">
+      <change afterPath="$PROJECT_DIR$/src/guiFX/StateModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guiFX/StateObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/ControlThePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/GraphicsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,6 +44,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../../Program Files/BellSoft/LibericaJDK-19-Full/lib/src.zip!/javafx.graphics/javafx/scene/PropertyHelper.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/alumni/Course.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -350,11 +354,6 @@
         <PinnedItemInfo parentTag="alumni.StudentRegular" memberName="grades" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="gradesDisplay" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
