@@ -1,5 +1,6 @@
 package guiFX;
 
+import FileHandling.ReaderFactory;
 import alumni.Course;
 import alumni.Student;
 import alumni.StudentRegular;
@@ -14,9 +15,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 public class ControlThePane extends Pane {
     Button loadButton = new Button("Load");
@@ -29,15 +31,16 @@ public class ControlThePane extends Pane {
     HBox horizontalBox2 = new HBox(300);
     HBox horizontalBox3 = new HBox(300);
     VBox verticalBox = new VBox(500);
-    Course course;
-    ArrayList<Student> courseStudents;
+    StateModel stateModel;
     private final DecimalFormat df = new DecimalFormat("#.##");
 
-    public ControlThePane() {
+    public ControlThePane(StateModel stateModel) {
+        this.stateModel = stateModel;
         makePane();
     }
 
     public void makePane() {
+        //artefacts in initialisation
         labelGrade.setTextFill(Color.web("#beede4"));
         labelSlider.setTextFill(Color.web("#beede4"));
         labelStudents.setTextFill(Color.web("#beede4"));
@@ -65,25 +68,42 @@ public class ControlThePane extends Pane {
         textArea.setPrefSize(300, 250);
         textArea.setStyle("fx-background-color: #658b8c; -fx-opacity: 0.7");
         textArea.setFont(new Font("Cambria", 16));
-
-        gradeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            if (course == null) {
+        getChildren().add(verticalBox);
+        //logic of artefact
+        stateModel.addObserver(() -> textArea.setText(courseText()));
+        gradeSlider.valueProperty().addListener((observable) -> {
+            if (stateModel.getCourse() == null) {
                 return;
             }
+            Course course = stateModel.getCourse();
             for (Student student :
-                    courseStudents) {
+                    course.assignedStudents()) {
                 if (student instanceof StudentRegular) {
-                    ((StudentRegular) student).preFactor = newValue.doubleValue();
+                    ((StudentRegular) student).preFactor = gradeSlider.getValue();
                 }
             }
+            stateModel.setCourse(course);
             textArea.setText(courseText());
-            labelSlider.setText("Pre-Grade weight: " + df.format(newValue));
+            labelSlider.setText("Pre-Grade weight: " + df.format(gradeSlider.getValue()));
+        });
+        loadButton.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            File dataFile = fileChooser.showOpenDialog(null);
+            if (dataFile != null) {
+                stateModel.setCourse(new ReaderFactory(dataFile).getCourse());
+                textArea.setText(courseText());
+                labelStudents
+                        .setText("Students in course: " + stateModel.getCourse().assignedStudents().size());
+            }
         });
     }
 
     public String courseText() {
-        StringBuilder std = new StringBuilder(course.name() + "\n" + course.id() + "\n\n");
-        courseStudents.forEach(student -> std.append(student.getName()).append(" (").append(student.getMajorCode())
+        //generate text
+        StringBuilder std = new StringBuilder(stateModel.getCourse().name() + "\n" +
+                stateModel.getCourse().id() + "\n\n");
+        stateModel.getCourse().assignedStudents().forEach(student -> std.append(student
+                        .getName()).append(" (").append(student.getMajorCode())
                 .append("): ").append(student.getExamGrade()).append("\n"));
         return std.toString();
     }

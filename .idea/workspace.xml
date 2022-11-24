@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="real thing">
+    <list default="true" id="3aa449c2-e9b9-4972-9abc-c2d09c07d863" name="Changes" comment="version 9 hotfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling/ReaderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiFX/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiFX/MainPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,16 +15,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="96b441532b915ce2ed29a78106f73727766fcac4" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +39,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../../Program Files/BellSoft/LibericaJDK-19-Full/lib/src.zip!/javafx.graphics/javafx/scene/PropertyHelper.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/alumni/Course.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -142,10 +141,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FXApp" />
-        <item itemvalue="Application.ApplicationLauncher" />
         <item itemvalue="Application.ReaderTagValue" />
         <item itemvalue="Application.MainPane" />
         <item itemvalue="Application.Course" />
+        <item itemvalue="Application.ApplicationLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -263,14 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668353578063</updated>
     </task>
-    <task id="LOCAL-00016" summary="real thing">
-      <created>1668525501581</created>
+    <task id="LOCAL-00016" summary="version 9">
+      <created>1669166028180</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1668525501581</updated>
+      <updated>1669166028180</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="version 9 hotfix">
+      <created>1669197824704</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669197824704</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -287,7 +293,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="helps" />
+                        <option value="scannerRegex" />
                       </list>
                     </value>
                   </entry>
@@ -305,22 +311,12 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="develop" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
+                  <option value="scannerRegex" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="HEAD" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="scannerRegex" />
                 </option>
               </RecentGroup>
             </list>
@@ -347,8 +343,9 @@
     <MESSAGE value="V7 no comments...." />
     <MESSAGE value="V7 final version...." />
     <MESSAGE value="v8" />
-    <MESSAGE value="real thing" />
-    <option name="LAST_COMMIT_MESSAGE" value="real thing" />
+    <MESSAGE value="version 9" />
+    <MESSAGE value="version 9 hotfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 9 hotfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,11 +365,6 @@
         <PinnedItemInfo parentTag="alumni.StudentRegular" memberName="grades" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="gradesDisplay" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

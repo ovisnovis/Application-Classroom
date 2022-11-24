@@ -16,7 +16,6 @@ public class FXApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         MainPane mainPane = new MainPane();
-        mainPane.getChildren().addAll(mainPane.splitPane);
         Scene scene = new Scene(mainPane, 1024, 382);
         primaryStage.setScene(scene);
         primaryStage.getIcons()
